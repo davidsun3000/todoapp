@@ -13,24 +13,24 @@ require('laravel-mix-tailwind');
  |
  */
 
-// mix.js('resources/js/app.js', 'public/js')
-//    .postCss('resources/css/app.css', 'public/css')
-//    .tailwind('./tailwind.config.js');
 mix.js('resources/js/app.js', 'public/js')
     .postCss('resources/css/app.css', 'public/css')
-    .options({
-        postCss: [
-            require('postcss-import')(),
-            require('tailwindcss')(),
-            require('postcss-cssnext')({
-                // Mix adds autoprefixer already, don't need to run it twice
-                features: {
-                    autoprefixer: false
-                }
-            }),
-        ]
-    })
-    .purgeCss();
+    .tailwind('./tailwind.config.js');
+// mix.js('resources/js/app.js', 'public/js')
+//     .postCss('resources/css/app.css', 'public/css')
+//     .options({
+//         postCss: [
+//             require('postcss-import')(),
+//             require('tailwindcss')(),
+//             require('postcss-cssnext')({
+//                 // Mix adds autoprefixer already, don't need to run it twice
+//                 features: {
+//                     autoprefixer: false
+//                 }
+//             }),
+//         ]
+//     })
+//     .purgeCss();
 
 if (mix.inProduction()) {
     mix
