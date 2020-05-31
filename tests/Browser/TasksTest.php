@@ -31,6 +31,7 @@ class TasksTest extends DuskTestCase
     public function testCreateTask()
     {
         $user = factory(User::class)->create();
+        
         $this->browse(function (Browser $browser) {
             // Log::info("User: ", dd($this->user));
             // dd($this->user);
