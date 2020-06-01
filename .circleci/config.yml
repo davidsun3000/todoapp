@@ -20,7 +20,7 @@ jobs:
 
     steps:
       - checkout
-      - run: apt-get update
+      - run: sudo apt-get update
       - run: sudo apt install -y libsqlite3-dev zlib1g-dev
       - run: sudo apt install -y --fix-missing default-mysql-client
       - run: sudo docker-php-ext-install zip
